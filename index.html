@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Promoción ANCAP - Banco Itaú 2025</title>
+    <title>Herramientas Coki - Guía Completa de Herramientas</title>
+    <meta name="description" content="Guía completa de herramientas de cocina y bricolaje con información detallada de uso">
+    <meta name="keywords" content="herramientas, cocina, bricolaje, usos, guía">
+    
     <style>
         * {
             margin: 0;
@@ -12,302 +15,852 @@
         }
 
         body {
-            font-family: 'Arial', sans-serif;
-            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5a24 50%, #ff9ff3 100%);
             min-height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 20px;
         }
 
-        .promo-container {
-            background: white;
-            border-radius: 20px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            max-width: 800px;
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            position: fixed;
             width: 100%;
-            position: relative;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
         }
 
-        .header {
-            background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
-            padding: 30px;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .header::before {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
-            animation: shimmer 3s ease-in-out infinite;
-        }
-
-        @keyframes shimmer {
-            0%, 100% { transform: rotate(0deg); }
-            50% { transform: rotate(180deg); }
-        }
-
-        .logos {
+        nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin-bottom: 20px;
-            position: relative;
-            z-index: 2;
         }
 
-        .itau-logo {
-            background: white;
-            color: #ff6b35;
-            padding: 12px 20px;
-            border-radius: 15px;
+        .logo {
+            font-size: 2.2rem;
             font-weight: bold;
-            font-size: 18px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-decoration: none;
         }
 
-        .beneficios-badge {
-            background: rgba(255, 255, 255, 0.2);
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            transition: all 0.3s;
+        }
+
+        .nav-links a:hover {
+            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
             color: white;
-            padding: 8px 16px;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: white;
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .hero-content h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            animation: fadeInUp 1s ease-out;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero-content p {
+            font-size: 1.4rem;
+            margin-bottom: 2rem;
+            animation: fadeInUp 1s ease-out 0.3s both;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1.2rem 2.5rem;
+            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            animation: fadeInUp 1s ease-out 0.6s both;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+        }
+
+        /* Sections */
+        section {
+            padding: 5rem 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 3rem;
+            margin-bottom: 3rem;
+            color: #333;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+            border-radius: 2px;
+        }
+
+        /* Herramientas de Cocina */
+        .cocina {
+            background: white;
+        }
+
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
+            margin-top: 4rem;
+        }
+
+        .tool-card {
+            background: white;
             border-radius: 20px;
-            font-size: 14px;
-            font-weight: 600;
-            backdrop-filter: blur(10px);
-        }
-
-        .discount-main {
-            text-align: center;
-            position: relative;
-            z-index: 2;
-        }
-
-        .discount-number {
-            font-size: 120px;
-            font-weight: 900;
-            color: white;
-            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-            margin-bottom: 10px;
-            line-height: 1;
-        }
-
-        .discount-text {
-            font-size: 24px;
-            color: white;
-            font-weight: 600;
-            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-            margin-bottom: 20px;
-        }
-
-        .gas-station-visual {
-            background: linear-gradient(180deg, #87CEEB 0%, #98D8E8 50%, #B0E0E6 100%);
-            padding: 40px 30px;
-            position: relative;
             overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            transition: all 0.3s;
+            border: 2px solid transparent;
         }
 
-        .clouds {
-            position: absolute;
-            top: 20px;
+        .tool-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+            border-color: #ff6b6b;
+        }
+
+        .tool-image {
             width: 100%;
-            height: 60px;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 20"><circle cx="20" cy="10" r="8" fill="white" opacity="0.8"/><circle cx="35" cy="8" r="6" fill="white" opacity="0.6"/><circle cx="50" cy="12" r="7" fill="white" opacity="0.7"/><circle cx="70" cy="9" r="5" fill="white" opacity="0.5"/><circle cx="85" cy="11" r="6" fill="white" opacity="0.6"/></svg>') repeat-x;
-            animation: float 6s ease-in-out infinite;
+            height: 250px;
+            object-fit: cover;
+            transition: transform 0.3s;
         }
 
-        @keyframes float {
-            0%, 100% { transform: translateX(0); }
-            50% { transform: translateX(20px); }
+        .tool-card:hover .tool-image {
+            transform: scale(1.05);
         }
 
-        .station-canopy {
-            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
-            height: 80px;
-            border-radius: 10px;
-            margin: 40px 0 20px 0;
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+        .tool-content {
+            padding: 2rem;
         }
 
-        .ancap-logo {
-            color: #FFD700;
-            font-size: 28px;
-            font-weight: bold;
-            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+        .tool-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #333;
+            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
-        .pumps {
-            display: flex;
-            justify-content: space-around;
-            margin-top: 20px;
-        }
-
-        .pump {
-            background: white;
-            width: 60px;
-            height: 100px;
-            border-radius: 8px;
-            position: relative;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .pump-screen {
-            background: #000;
-            color: #00ff00;
-            width: 40px;
-            height: 30px;
-            border-radius: 4px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 12px;
-            font-family: monospace;
-        }
-
-        .terms {
-            background: #f8f9fa;
-            padding: 25px 30px;
-            border-top: 3px solid #ff6b35;
-        }
-
-        .terms-text {
+        .tool-content p {
+            margin-bottom: 1rem;
             color: #666;
-            font-size: 14px;
-            line-height: 1.6;
-            text-align: center;
+            line-height: 1.7;
         }
 
-        .highlight {
-            color: #ff6b35;
-            font-weight: bold;
-        }
-
-        .validity-period {
-            background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
-            color: white;
-            padding: 15px;
-            margin: 15px 0;
+        .uso-info {
+            background: linear-gradient(45deg, rgba(255, 107, 107, 0.1), rgba(238, 90, 36, 0.1));
+            padding: 1rem;
             border-radius: 10px;
-            text-align: center;
-            font-weight: 600;
-            font-size: 16px;
+            border-left: 4px solid #ff6b6b;
+            margin-top: 1rem;
         }
 
-        .modern-elements {
-            position: absolute;
+        .uso-info h4 {
+            color: #ff6b6b;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+
+        .uso-info ul {
+            margin-left: 1.5rem;
+            color: #555;
+        }
+
+        .uso-info li {
+            margin-bottom: 0.3rem;
+        }
+
+        /* Herramientas de Bricolaje */
+        .bricolaje {
+            background: #f8f9fa;
+        }
+
+        /* Tips Section */
+        .tips {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .tips .section-title {
+            color: white;
+        }
+
+        .tips-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .tip-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 2rem;
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: transform 0.3s;
+            text-align: center;
+        }
+
+        .tip-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .tip-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        /* Footer */
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 3rem 0;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+            text-align: left;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 1rem;
+            color: #ff6b6b;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .tools-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .logo {
+                font-size: 1.8rem;
+            }
+
+            .footer-content {
+                text-align: center;
+            }
+        }
+
+        /* Scroll indicator */
+        .scroll-indicator {
+            position: fixed;
             top: 0;
             left: 0;
-            right: 0;
-            bottom: 0;
-            pointer-events: none;
-        }
-
-        .sparkle {
-            position: absolute;
-            width: 4px;
+            width: 100%;
             height: 4px;
-            background: white;
-            border-radius: 50%;
-            animation: sparkle 2s ease-in-out infinite;
+            background: rgba(255, 255, 255, 0.3);
+            z-index: 9999;
         }
 
-        .sparkle:nth-child(1) { top: 20%; left: 10%; animation-delay: 0s; }
-        .sparkle:nth-child(2) { top: 30%; right: 15%; animation-delay: 0.5s; }
-        .sparkle:nth-child(3) { top: 60%; left: 20%; animation-delay: 1s; }
-        .sparkle:nth-child(4) { top: 70%; right: 25%; animation-delay: 1.5s; }
-
-        @keyframes sparkle {
-            0%, 100% { opacity: 0; transform: scale(0); }
-            50% { opacity: 1; transform: scale(1); }
-        }
-
-        @media (max-width: 768px) {
-            .discount-number {
-                font-size: 80px;
-            }
-            
-            .discount-text {
-                font-size: 18px;
-            }
-            
-            .logos {
-                flex-direction: column;
-                gap: 15px;
-            }
-            
-            .pumps {
-                flex-wrap: wrap;
-                gap: 15px;
-            }
+        .scroll-progress {
+            height: 100%;
+            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+            width: 0%;
+            transition: width 0.3s;
         }
     </style>
 </head>
 <body>
-    <div class="promo-container">
-        <div class="header">
-            <div class="modern-elements">
-                <div class="sparkle"></div>
-                <div class="sparkle"></div>
-                <div class="sparkle"></div>
-                <div class="sparkle"></div>
-            </div>
-            
-            <div class="logos">
-                <div class="itau-logo">itaú</div>
-                <div class="beneficios-badge">Beneficios Exclusivos</div>
-            </div>
-            
-            <div class="discount-main">
-                <div class="discount-number">30%</div>
-                <div class="discount-text">CARGANDO COMBUSTIBLE EN ANCAP<br>CON BANCO ITAÚ</div>
-            </div>
-        </div>
-
-        <div class="gas-station-visual">
-            <div class="clouds"></div>
-            
-            <div class="station-canopy">
-                <div class="ancap-logo">ANCAP</div>
-            </div>
-            
-            <div class="pumps">
-                <div class="pump">
-                    <div class="pump-screen">695</div>
-                </div>
-                <div class="pump">
-                    <div class="pump-screen">✓</div>
-                </div>
-                <div class="pump">
-                    <div class="pump-screen">30%</div>
-                </div>
-            </div>
-        </div>
-
-        <div class="terms">
-            <div class="validity-period">
-                PROMOCIÓN VÁLIDA DEL 15 DE ENERO AL 31 DE DICIEMBRE DE 2025
-            </div>
-            
-            <div class="terms-text">
-                <strong class="highlight">Válida en todas las sucursales del país</strong><br>
-                Sujeto a términos y condiciones. Descuento aplicable únicamente con tarjetas de débito y crédito Banco Itaú.<br>
-                Promoción no acumulable con otras ofertas. Consulta disponibilidad en tu sucursal más cercana.
-            </div>
-        </div>
+    <!-- Scroll Indicator -->
+    <div class="scroll-indicator">
+        <div class="scroll-progress" id="scrollProgress"></div>
     </div>
+
+    <!-- Header -->
+    <header>
+        <nav class="container">
+            <a href="#" class="logo">🔧 Herramientas Coki</a>
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#cocina">Cocina</a></li>
+                <li><a href="#bricolaje">Bricolaje</a></li>
+                <li><a href="#tips">Consejos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>🔧 Herramientas Coki</h1>
+                <p>Tu guía completa para conocer y usar las mejores herramientas de cocina y bricolaje</p>
+                <a href="#cocina" class="cta-button">Explorar Herramientas</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Herramientas de Cocina -->
+    <section id="cocina" class="cocina">
+        <div class="container">
+            <h2 class="section-title fade-in">🍳 Herramientas de Cocina</h2>
+            
+            <div class="tools-grid">
+                <!-- Cuchillos de Chef -->
+                <div class="tool-card fade-in">
+                    <img src="https://images.unsplash.com/photo-1593618998160-e34014e67546?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" 
+                         alt="Cuchillos de chef profesionales" 
+                         class="tool-image">
+                    <div class="tool-content">
+                        <h3>🔪 Cuchillos de Chef</h3>
+                        <p>Los cuchillos son las herramientas más importantes en cualquier cocina. Un buen cuchillo de chef puede hacer la diferencia entre una experiencia frustrante y una preparación eficiente de alimentos.</p>
+                        <div class="uso-info">
+                            <h4>💡 Cómo usar:</h4>
+                            <ul>
+                                <li>Mantén el cuchillo afilado para mayor seguridad</li>
+                                <li>Usa movimiento de balanceo para cortar</li>
+                                <li>Protege tus dedos con la técnica de garra</li>
+                                <li>Limpia inmediatamente después del uso</li>
+                                <li>Almacena en bloque de madera o tira magnética</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sartenes Antiadherentes -->
+                <div class="tool-card fade-in">
+                    <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" 
+                         alt="Sartenes antiadherentes de calidad" 
+                         class="tool-image">
+                    <div class="tool-content">
+                        <h3>🍳 Sartenes Antiadherentes</h3>
+                        <p>Las sartenes antiadherentes son esenciales para cocinar con menos aceite y facilitar la limpieza. Perfectas para huevos, pescados y verduras delicadas.</p>
+                        <div class="uso-info">
+                            <h4>💡 Cómo usar:</h4>
+                            <ul>
+                                <li>Precalienta a fuego medio antes de agregar comida</li>
+                                <li>Usa utensilios de silicona o madera</li>
+                                <li>Evita temperaturas muy altas</li>
+                                <li>Lava con esponja suave, no abrasiva</li>
+                                <li>Guarda con protectores entre sartenes</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Batidora de Mano -->
+                <div class="tool-card fade-in">
+                    <img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" 
+                         alt="Batidora de mano moderna" 
+                         class="tool-image">
+                    <div class="tool-content">
+                        <h3>🥄 Batidora de Mano</h3>
+                        <p>Herramienta versátil para mezclar, batir y emulsionar. Ideal para salsas, cremas, sopas y postres. Más práctica que una batidora grande para tareas pequeñas.</p>
+                        <div class="uso-info">
+                            <h4>💡 Cómo usar:</h4>
+                            <ul>
+                                <li>Sumerge completamente las aspas antes de encender</li>
+                                <li>Usa recipientes altos para evitar salpicaduras</li>
+                                <li>Mueve en círculos para mezclar uniformemente</li>
+                                <li>Limpia inmediatamente después del uso</li>
+                                <li>Ideal para purés directamente en la olla</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tabla de Cortar -->
+                <div class="tool-card fade-in">
+                    <img src="https://images.unsplash.com/photo-1594736797933-d0d2a4c78e3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" 
+                         alt="Tablas de cortar de madera y plástico" 
+                         class="tool-image">
+                    <div class="tool-content">
+                        <h3>📋 Tablas de Cortar</h3>
+                        <p>Base fundamental para toda preparación culinaria. Las tablas de calidad protegen tus cuchillos y proporcionan una superficie segura para cortar.</p>
+                        <div class="uso-info">
+                            <h4>💡 Cómo usar:</h4>
+                            <ul>
+                                <li>Usa diferentes tablas para carnes y vegetales</li>
+                                <li>Coloca toalla húmeda debajo para estabilidad</li>
+                                <li>Limpia con agua caliente y jabón</li>
+                                <li>Desinfecta con vinagre o limón</li>
+                                <li>Seca completamente antes de guardar</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Procesador de Alimentos -->
+                <div class="tool-card fade-in">
+                    <img src="https://images.unsplash.com/photo-1586201375761-83865001e31c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" 
+                         alt="Procesador de alimentos moderno" 
+                         class="tool-image">
+                    <div class="tool-content">
+                        <h3>⚙️ Procesador de Alimentos</h3>
+                        <p>Máquina multifuncional que ahorra tiempo en la preparación. Perfecta para picar, rallar, mezclar y hacer masas.</p>
+                        <div class="uso-info">
+                            <h4>💡 Cómo usar:</h4>
+                            <ul>
+                                <li>Corta alimentos en trozos pequeños antes de procesar</li>
+                                <li>Usa pulsos cortos para mayor control</li>
+                                <li>No sobrecargues el recipiente</li>
+                                <li>Limpia inmediatamente después del uso</li>
+                                <li>Guarda las cuchillas con cuidado</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Termómetro de Cocina -->
+                <div class="tool-card fade-in">
+                    <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" 
+                         alt="Termómetro digital de cocina" 
+                         class="tool-image">
+                    <div class="tool-content">
+                        <h3>🌡️ Termómetro Digital</h3>
+                        <p>Esencial para cocinar carnes perfectamente y verificar temperaturas de aceite. Garantiza seguridad alimentaria y resultados consistentes.</p>
+                        <div class="uso-info">
+                            <h4>💡 Cómo usar:</h4>
+                            <ul>
+                                <li>Inserta en la parte más gruesa de la carne</li>
+                                <li>Espera a que se estabilice la lectura</li>
+                                <li>Calibra regularmente para precisión</li>
+                                <li>Limpia la sonda después de cada uso</li>
+                                <li>Conoce las temperaturas seguras por tipo de carne</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Herramientas de Bricolaje -->
+    <section id="bricolaje" class="bricolaje">
+        <div class="container">
+            <h2 class="section-title fade-in">🔨 Herramientas de Bricolaje</h2>
+            
+            <div class="tools-grid">
+                <!-- Taladro Eléctrico -->
+                <div class="tool-card fade-in">
+                    <img src="https://images.unsplash.com/photo-1609205805107-171b96e92a2c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" 
+                         alt="Taladro eléctrico profesional" 
+                         class="tool-image">
+                    <div class="tool-content">
+                        <h3>🔧 Taladro Eléctrico</h3>
+                        <p>Herramienta indispensable para cualquier proyecto de bricolaje. Versátil para perforar, atornillar y desarmar con diferentes brocas y accesorios.</p>
+                        <div class="uso-info">
+                            <h4>💡 Cómo usar:</h4>
+                            <ul>
+                                <li>Selecciona la broca adecuada para el material</li>
+                                <li>Marca el punto antes de perforar</li>
+                                <li>Mantén presión constante pero no excesiva</li>
+                                <li>Usa gafas de protección siempre</li>
+                                <li>Carga la batería antes de proyectos grandes</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sierra Circular -->
+                <div class="tool-card fade-in">
+                    <img src="https://images.unsplash.com/photo-1504148455328-c376907d081c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" 
+                         alt="Sierra circular para madera" 
+                         class="tool-image">
+                    <div class="tool-content">
+                        <h3>⚙️ Sierra Circular</h3>
+                        <p>Perfecta para cortes rectos y precisos en madera. Esencial para proyectos de carpintería y construcción de muebles.</p>
+                        <div class="uso-info">
+                            <h4>💡 Cómo usar:</h4>
+                            <ul>
+                                <li>Asegura la pieza antes de cortar</li>
+                                <li>Ajusta la profundidad de corte correctamente</li>
+                                <li>Usa guías para cortes rectos</li>
+                                <li>Mantén la sierra en movimiento constante</li>
+                                <li>Usa protección auditiva y visual</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Nivel de Burbuja -->
+                <div class="tool-card fade-in">
+                    <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" 
+                         alt="Nivel de burbuja profesional" 
+                         class="tool-image">
+                    <div class="tool-content">
+                        <h3>📏 Nivel de Burbuja</h3>
+                        <p>Herramienta de precisión para asegurar que las instalaciones queden perfectamente niveladas. Fundamental para colgar cuadros, instalar estantes y más.</p>
+                        <div class="uso-info">
+                            <h4>💡 Cómo usar:</h4>
+                            <ul>
+                                <li>Coloca sobre la superficie a nivelar</li>
+                                <li>Ajusta hasta que la burbuja esté centrada</li>
+                                <li>Verifica en múltiples puntos para precisión</li>
+                                <li>Limpia las burbujas regularmente</li>
+                                <li>Calibra periódicamente para mantener precisión</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Destornilladores -->
+                <div class="tool-card fade-in">
+                    <img src="https://images.unsplash.com/photo-1572981779307-38b8cabb2407?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" 
+                         alt="Set de destornilladores" 
+                         class="tool-image">
+                    <div class="tool-content">
+                        <h3>🪛 Set de Destornilladores</h3>
+                        <p>Conjunto básico para cualquier trabajo de bricolaje. Incluye diferentes tamaños y tipos de cabeza para todo tipo de tornillos.</p>
+                        <div class="uso-info">
+                            <h4>💡 Cómo usar:</h4>
+                            <ul>
+                                <li>Selecciona el tamaño exacto del tornillo</li>
+                                <li>Aplica presión hacia abajo mientras giras</li>
+                                <li>Gira en sentido horario para apretar</li>
+                                <li>Usa destornillador magnético para tornillos pequeños</li>
+                                <li>Mantén las puntas limpias y sin daños</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Martillo -->
+                <div class="tool-card fade-in">
+                    <img src="https://images.unsplash.com/photo-1609205805107-171b96e92a2c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" 
+                         alt="Martillo de carpintero" 
+                         class="tool-image">
+                    <div class="tool-content">
+                        <h3>🔨 Martillo de Carpintero</h3>
+                        <p>Herramienta básica pero esencial para clavar, extraer clavos y trabajos de demolición ligera. Un buen martillo dura toda la vida.</p>
+                        <div class="uso-info">
+                            <h4>💡 Cómo usar:</h4>
+                            <ul>
+                                <li>Agarra cerca del extremo del mango</li>
+                                <li>Golpea con la cara plana para clavar</li>
+                                <li>Usa la uña para extraer clavos</li>
+                                <li>Mantén movimiento fluido de muñeca</li>
+                                <li>Inspecciona el mango regularmente</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cinta Métrica -->
+                <div class="tool-card fade-in">
+                    <img src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" 
+                         alt="Cinta métrica de precisión" 
+                         class="tool-image">
+                    <div class="tool-content">
+                        <h3>📐 Cinta Métrica</h3>
+                        <p>Fundamental para medir con precisión en cualquier proyecto. Una buena cinta métrica es resistente, precisa y fácil de leer.</p>
+                        <div class="uso-info">
+                            <h4>💡 Cómo usar:</h4>
+                            <ul>
+                                <li>Engancha el extremo firmemente</li>
+                                <li>Mantén la cinta recta para medidas precisas</li>
+                                <li>Lee desde arriba para evitar paralaje</li>
+                                <li>Marca medidas importantes inmediatamente</li>
+                                <li>Retrae suavemente para prolongar vida útil</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tips y Consejos -->
+    <section id="tips" class="tips">
+        <div class="container">
+            <h2 class="section-title">💡 Consejos de Experto</h2>
+            
+            <div class="tips-grid">
+                <div class="tip-card fade-in">
+                    <span class="tip-icon">🛡️</span>
+                    <h3>Seguridad Primero</h3>
+                    <p>Siempre usa equipo de protección personal. Gafas, guantes y calzado adecuado pueden prevenir accidentes graves.</p>
+                </div>
+                
+                <div class="tip-card fade-in">
+                    <span class="tip-icon">🧽</span>
+                    <h3>Mantenimiento Regular</h3>
+                    <p>Limpia y mantén tus herramientas después de cada uso. Un buen mantenimiento extiende significativamente su vida útil.</p>
+                </div>
+                
+                <div class="tip-card fade-in">
+                    <span class="tip-icon">📚</span>
+                    <h3>Aprende Técnicas</h3>
+                    <p>Invierte tiempo en aprender técnicas correctas. Una buena técnica es más importante que tener las herramientas más caras.</p>
+                </div>
+                
+                <div class="tip-card fade-in">
+                    <span class="tip-icon">💰</span>
+                    <h3>Calidad sobre Cantidad</h3>
+                    <p>Es mejor tener pocas herramientas de calidad que muchas de baja calidad. Invierte en marcas reconocidas para herramientas básicas.</p>
+                </div>
+                
+                <div class="tip-card fade-in">
+                    <span class="tip-icon">🗂️</span>
+                    <h3>Organización</h3>
+                    <p>Mantén tus herramientas organizadas y en lugares específicos. Esto ahorra tiempo y previene pérdidas.</p>
+                </div>
+                
+                <div class="tip-card fade-in">
+                    <span class="tip-icon">🎯</span>
+                    <h3>Práctica Constante</h3>
+                    <p>La habilidad se desarrolla con la práctica. Comienza con proyectos simples antes de abordar tareas complejas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contacto">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>🔧 Herramientas Coki</h3>
+                    <p>Tu guía confiable para el mundo de las herramientas de cocina y bricolaje.</p>
+                    <p>Aprende, practica y mejora tus habilidades con nuestros consejos expertos.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>📞 Contacto</h3>
+                    <p>📧 info@herramientascoki.com</p>
+                    <p>📱 +34 900 123 456</p>
+                    <p>📍 Madrid, España</p>
+                </div>
+                <div class="footer-section">
+                    <h3>🌐 Síguenos</h3>
+                    <p>Mantente actualizado con los últimos consejos y herramientas</p>
+                    <p>🔗 Facebook | Instagram | YouTube</p>
+                </div>
+            </div>
+            <div style="border-top: 1px solid #555; padding-top: 2rem; margin-top: 2rem;">
+                <p>&copy; 2024 Herramientas Coki - Todos los derechos reservados</p>
+                <p>Diseñado con ❤️ para entusiastas de la cocina y el bricolaje</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Scroll progress indicator
+        window.addEventListener('scroll', function() {
+            const scrollProgress = document.getElementById('scrollProgress');
+            const scrollTop = window.pageYOffset;
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const scrollPercent = (scrollTop / docHeight) * 100;
+            scrollProgress.style.width = scrollPercent + '%';
+        });
+
+        // Fade in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Apply observer to fade-in elements
+        document.querySelectorAll('.fade-in').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+            observer.observe(el);
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(255, 255, 255, 0.98)';
+                header.style.boxShadow = '0 2px 30px rgba(0,0,0,0.15)';
+            } else {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+                header.style.boxShadow = '0 2px 20px rgba(0,0,0,0.1)';
+            }
+        });
+
+        // Add hover effects for tool cards
+        document.querySelectorAll('.tool-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-10px) scale(1.02)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+
+        // Mobile menu toggle (for future enhancement)
+        const mobileMenuToggle = document.createElement('button');
+        mobileMenuToggle.innerHTML = '☰';
+        mobileMenuToggle.style.cssText = `
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #333;
+            padding: 0.5rem;
+            border-radius: 5px;
+            transition: background 0.3s;
+        `;
+        
+        mobileMenuToggle.addEventListener('click', function() {
+            const navLinks = document.querySelector('.nav-links');
+            if (navLinks.style.display === 'flex') {
+                navLinks.style.display = 'none';
+            } else {
+                navLinks.style.display = 'flex';
+                navLinks.style.flexDirection = 'column';
+                navLinks.style.position = 'absolute';
+                navLinks.style.top = '100%';
+                navLinks.style.left = '0';
+                navLinks.style.right = '0';
+                navLinks.style.background = 'white';
+                navLinks.style.padding = '1rem';
+                navLinks.style.boxShadow = '0 5px 15px rgba(0,0,0,0.1)';
+            }
+        });
+        
+        // Add to navigation for mobile
+        document.querySelector('nav').appendChild(mobileMenuToggle);
+
+        // Show mobile menu button on small screens
+        function checkScreenSize() {
+            const navLinks = document.querySelector('.nav-links');
+            if (window.innerWidth <= 768) {
+                mobileMenuToggle.style.display = 'block';
+                navLinks.style.display = 'none';
+            } else {
+                mobileMenuToggle.style.display = 'none';
+                navLinks.style.display = 'flex';
+                navLinks.style.flexDirection = 'row';
+                navLinks.style.position = 'static';
+                navLinks.style.background = 'transparent';
+                navLinks.style.padding = '0';
+                navLinks.style.boxShadow = 'none';
+            }
+        }
+
+        window.addEventListener('resize', checkScreenSize);
+        checkScreenSize();
+
+        // Add loading effect
+        window.addEventListener('load', function() {
+            document.body.style.opacity = '0';
+            document.body.style.transition = 'opacity 0.5s ease';
+            setTimeout(() => {
+                document.body.style.opacity = '1';
+            }, 100);
+        });
+    </script>
 </body>
 </html>
